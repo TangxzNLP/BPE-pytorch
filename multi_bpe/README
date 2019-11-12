@@ -1,0 +1,63 @@
+# Multi_BPE_0.1
+
+* **The introduction is about multi_bpe version 0.1. The training dataset in news area is from souhu corpus. We had splited the data into 100 pieces you can see in dir:'../data/splited_file'. We build a bash file to use 10 processes to train these data parallelly. More detailed information is as follows:** 
+
+
+* * *
+#### Project：
+
+1. structure of dataset
+    dataset /
+    ---__init__.py   
+    ---dataclean.py
+    ---clean_dataset.txt
+    ---output.txt
+        output.txt is the origin text of souhu news. we use clean_dataset.txt to drop some useness symbols like ",.?;'[]=-<>..."
+
+* usage:
+    python dataclean.py inputtxt outputtxt
+    """
+    inputtxt: origin text to be cleaned
+    outputxt: the cleaned output fileanme
+    """
+
+2. structure of core
+    core /
+    ---__init__.py
+    ---split.py    
+    ---train.py
+    ---train_run.sh
+    ---model_concat.py
+    ---evaluate.py
+    
+
+* split.py
+split.py is used to split the cleaned file into 100 pieces, the path data to be stored is '../data/splited_file/'
+**usage:** python split.py
+
+* train.py
+train.py is used to train splited data into 100 models which are stored at '../model/model_split/'
+**usage:** python train.py ../model/model_split/  ../data/splited_file/  25 30
+There four parameters:
+../model/model_split/ is where you store model 
+../data/splited_file/ is where you the trained data
+25 is the begining index of trained data
+30 is the end index of trained data
+
+* train_run.sh
+The bash file is for the purpose of training parallely
+**usage** : bash train_run.sh
+* model_concat.py
+concat the splited model into one.
+**uasge:** python model_concat.py
+
+* evaluate.py
+use evaluate.py to do word segmentation task.
+**usage:** python evaluate.py "南京市长江大桥"
+you will get "南京"、“市”、“长江”、“大桥”
+
+3. structure of log
+    log of training 
+
+4. structure of model
+    The path to store splited model and final model 

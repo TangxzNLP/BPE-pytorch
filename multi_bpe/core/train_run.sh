@@ -1,0 +1,10 @@
+CUDA_VISIBLE_DEVICES=0,1 nohup python -u train.py ../model/model_split/  ../data/splited_file/  5 10  params1 > ../log/nohup_0.out 2>&1 &
+CUDA_VISIBLE_DEVICES=0,1 nohup python -u train.py ../model/model_split/  ../data/splited_file/  15 20  params1 > ../log/nohup_1.out 2>&1 &
+CUDA_VISIBLE_DEVICES=0,1 nohup python -u train.py ../model/model_split/  ../data/splited_file/  25 30  params1 > ../log/nohup_2.out 2>&1 &
+CUDA_VISIBLE_DEVICES=0,1 nohup python -u train.py ../model/model_split/  ../data/splited_file/  34 40  params1 > ../log/nohup_3.out 2>&1 &
+CUDA_VISIBLE_DEVICES=0,1 nohup python -u train.py ../model/model_split/  ../data/splited_file/  45 50  params1 > ../log/nohup_4.out 2>&1 &
+CUDA_VISIBLE_DEVICES=0,1 nohup python -u train.py ../model/model_split/  ../data/splited_file/  55 60  params1 > ../log/nohup_5.out 2>&1 &
+CUDA_VISIBLE_DEVICES=0,1 nohup python -u train.py ../model/model_split/  ../data/splited_file/  65 70  params1 > ../log/nohup_6.out 2>&1 &
+CUDA_VISIBLE_DEVICES=0,1 nohup python -u train.py ../model/model_split/  ../data/splited_file/  75 80  params1 > ../log/nohup_7.out 2>&1 &
+CUDA_VISIBLE_DEVICES=0,1 nohup python -u train.py ../model/model_split/  ../data/splited_file/  85 90  params1 > ../log/nohup_8.out 2>&1 &
+CUDA_VISIBLE_DEVICES=0,1 nohup python -u train.py ../model/model_split/  ../data/splited_file/  95 100  params1 > ../log/nohup_9.out 2>&1 &
